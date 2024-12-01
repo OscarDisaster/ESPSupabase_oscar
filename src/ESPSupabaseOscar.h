@@ -56,9 +56,6 @@ public:
     int upload(String bucket, String filename, String mime_type, Stream *stream, uint32_t size); // Sube un archivo desde un Stream
     int upload(String bucket, String filename, String mime_type, uint8_t *buffer, uint32_t size); // Sube un archivo desde un buffer
 
-    // Acceso al cliente WiFiClientSecure
-    WiFiClientSecure &getClient() { return client; } // Método público para obtener el cliente
-    
     // Operadores de comparación para filtros
     Supabase &eq(String coll, String conditions);
     Supabase &gt(String coll, String conditions);
@@ -93,7 +90,8 @@ public:
     // Llamadas a procedimientos remotos (RPC)
     String rpc(String func_name, String json_param = "");
 
-
+    // Acceso al cliente WiFiClientSecure
+    WiFiClientSecure &getClient() { return client; } // Método público para obtener el cliente
 };
 
 #endif
