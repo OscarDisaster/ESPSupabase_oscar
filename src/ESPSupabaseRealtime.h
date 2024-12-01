@@ -35,16 +35,18 @@ private:
 
   // Initial config
   const char *config = R"({"event":"phx_join","topic":"realtime:ESP","payload":{"config":{}},"ref":"ESP"})";
+
   // Postgres Changes
   bool isPostgresChanges = false;
-  JsonDocument postgresChanges;
+  DynamicJsonDocument postgresChanges = DynamicJsonDocument(1024);
+
   // Presence
   const char *jsonPresence = R"({"topic":"realtime:ESP","event":"presence","payload":{"type":"presence","event":"track","payload":{"user":"","online_at":""}},"ref":"ESP"})";
   bool isPresence = false;
   String presenceConfig;
-  // bool isBroadcast = false;  // Not implemented yet
-  // JsonDocument broadcastConfig; // Not implemented yet
-  JsonDocument jsonRealtimeConfig;
+
+  // Realtime Config
+  DynamicJsonDocument jsonRealtimeConfig = DynamicJsonDocument(1024);
   String configJSON;
 
   // Heartbeat
