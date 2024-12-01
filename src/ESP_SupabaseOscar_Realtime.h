@@ -1,5 +1,5 @@
-#ifndef ESP_Supabase_Realtime_h
-#define ESP_Supabase_Realtime_h
+#ifndef ESP_SupabaseOscar_Realtime_h
+#define ESP_SupabaseOscar_Realtime_h
 
 #include <Arduino.h>
 #include <ArduinoJson.h>

@@ -1,28 +1,24 @@
 {
-  "name": "ESPSupabase",
+  "name": "ESPSupabase_oscar",
   "keywords": "supabase, postgresql, rest, database, IoT",
   "version": "0.1.0",
-  "description": "A Arduino Platform Library for connecting ESP32/ESP8266 to Supabase, including user authentication",
+  "description": "A fork of ESPSupabase with custom adjustments by Oscar LN",
   "authors": [
     {
-      "name": "Jhagas Hana Winaya",
-      "email": "jhagas@e.email"
-    },
-    {
-      "name": "Achmad Nashruddin Riskynanda",
-      "email": "achmad.riskynanda01@gmail.com"
+      "name": "Oscar LN",
+      "email": "olamanoriega@gmail.com"
     }
   ],
   "license": "MIT",
   "frameworks": "arduino",
-  "platforms": "espressif32",
+  "platforms": ["espressif32", "espressif8266"],
   "examples": "examples/*/*.ino",
   "dependencies": {
-    "bblanchon/ArduinoJson": "^7.1.0",
+    "bblanchon/ArduinoJson": "^6.21.3",
     "links2004/WebSockets": "^2.4.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhagas/ESPSupabase.git"
+    "url": "https://github.com/OscarDisaster/ESPSupabase_oscar.git"
   }
 }

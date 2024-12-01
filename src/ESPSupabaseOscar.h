@@ -1,5 +1,5 @@
-#ifndef ESP_Supabase_h
-#define ESP_Supabase_h
+#ifndef ESP_SupabaseOscar_h
+#define ESP_SupabaseOscar_h
 
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -48,7 +48,7 @@ public:
   // query reset
   void urlQuery_reset();
 
-  // membuat Query Builder
+  // Query Builder
   Supabase &from(String table);
   int insert(String table, String json, bool upsert);
   Supabase &select(String colls);
@@ -79,10 +79,8 @@ public:
   Supabase &limit(unsigned int by);
   Supabase &offset(int by);
 
-  // do select. execute this after building your query
+  // Execute query
   String doSelect();
-
-  // do update. execute this after querying your update
   int doUpdate(String json);
 
   int login_email(String email_a, String password_a);
