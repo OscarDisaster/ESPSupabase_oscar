@@ -1,3 +1,4 @@
+
 #ifndef ESP_SupabaseOscar_Realtime_h
 #define ESP_SupabaseOscar_Realtime_h
 
@@ -27,7 +28,7 @@ private:
   String password;
   String data;
   String loginMethod;
-  bool useAuth;
+  bool useAuth = false;
   int _login_process();
   unsigned int authTimeout = 0;
   unsigned long loginTime;
@@ -61,6 +62,7 @@ private:
 
 public:
   SupabaseRealtime() {}
+  ~SupabaseRealtime() {} // Agregar destructor explícito
   void begin(String hostname, String key, void (*func)(String));
   void sendPresence(String device_name);
   // void broadcast(); // Not implemented yet
@@ -70,5 +72,6 @@ public:
   int login_email(String email_a, String password_a);
   int login_phone(String phone_a, String password_a);
 };
+
 
 #endif
